@@ -37,11 +37,17 @@ python app.py
 Отображает простую HTML-подсказку.
 #### GET /get
 Возвращает JSON:
+
 {
+  
   "status": "ok",
+  
   "message": "Works on my machine.",
+  
   "params": { /* переданные GET-параметры */ }
+
 }
+
 ### Пример:
 curl "http://127.0.0.1:5000/get?foo=bar"
 
