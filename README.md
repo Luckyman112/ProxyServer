@@ -6,7 +6,7 @@
 
 ## Как запустить
 ## 1. Склонировать репозиторий  
-git clone https://github.com/<ваш-логин>/ProxyServer.git
+git clone https://github.com/Luckyman112/ProxyServer.git
 cd ProxyServer
 
 ## 2. Создать и активировать виртуальное окружение
