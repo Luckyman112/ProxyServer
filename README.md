@@ -19,6 +19,7 @@ source venv/bin/activate
 ## 3. Установить зависимости
 В корне проекта есть requirements.txt.
 pip install -r requirements.txt
+  
   Содержимое requirements.txt:
   Flask
   requests
