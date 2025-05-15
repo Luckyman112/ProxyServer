@@ -21,8 +21,11 @@ source venv/bin/activate
 pip install -r requirements.txt
   
   Содержимое requirements.txt:
+  
   Flask
+  
   requests
+  
   gunicorn
 
 ## 4. Запустить сервер
