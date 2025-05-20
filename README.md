@@ -6,7 +6,8 @@
 
 ## Как запустить
 ## 1. Склонировать репозиторий  
-git clone https://github.com/<ваш-логин>/ProxyServer.git
+git clone https://github.com/Luckyman112/ProxyServer.git
+
 cd ProxyServer
 
 ## 2. Создать и активировать виртуальное окружение
@@ -19,9 +20,13 @@ source venv/bin/activate
 ## 3. Установить зависимости
 В корне проекта есть requirements.txt.
 pip install -r requirements.txt
+  
   Содержимое requirements.txt:
+  
   Flask
+  
   requests
+  
   gunicorn
 
 ## 4. Запустить сервер
@@ -33,15 +38,21 @@ python app.py
 Отображает простую HTML-подсказку.
 #### GET /get
 Возвращает JSON:
+
 {
+  
   "status": "ok",
+  
   "message": "Works on my machine.",
+  
   "params": { /* переданные GET-параметры */ }
+
 }
+
 ### Пример:
 curl "http://127.0.0.1:5000/get?foo=bar"
 
-## Продакшн-запуск (опционально)
-#На Linux/WSL с Gunicorn
+# Продакшн-запуск (опционально)
+#### На Linux/WSL с Gunicorn
 pip install gunicorn
 gunicorn -w 4 -b 0.0.0.0:5000 app:app
