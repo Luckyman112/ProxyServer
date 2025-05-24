@@ -1,4 +1,4 @@
-version: "3"
+version: "3.9"
 
 services:
   proxy:
@@ -7,14 +7,16 @@ services:
       dockerfile: Dockerfile
     container_name: proxy
     ports:
-      - "5000:5000"
+      - "5000:5000"           
+    volumes:
+      - .:/app              
     restart: unless-stopped
 
   open-webui:
     image: ghcr.io/open-webui/open-webui:main
     container_name: open-webui
     ports:
-      - "3000:8080"
+      - "3000:8080"          
     depends_on:
-      - proxy
+      - proxy                
     restart: unless-stopped
