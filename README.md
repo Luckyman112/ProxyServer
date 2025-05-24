@@ -72,7 +72,8 @@ log.txt: файл логов создаётся автоматически пр�
 ```json
 {
   "object":"list",
-  "data":[{"id":"gpt-3.5-turbo","object":"model","created":0,"owned_by":"proxy-server","permission":[]}]
+  "data":[{"id":"gpt-3.5-turbo","object":"model","created":0
+  "owned_by":"proxy-server","permission":[]}]
 }
 ```
 
