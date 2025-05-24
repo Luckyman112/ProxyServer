@@ -91,25 +91,29 @@ CORS-прелюдия, отвечает 204 No Content.
 
 ## Логи
 Все входящие payload’ы записываются в log.txt в формате JSON:
-
+```json
 {
   "stream": true,
   "model": "gpt-3.5-turbo",
   "messages": [...],
   "timestamp": "2025-05-24T14:29:30"
 }
+```
 
 Чтобы смотреть логи на хосте (при volume .:/app):
-
+```bash
 tail -f log.txt
+```
 
 ## .gitignore
+```gitignore
 __pycache__/
 *.py[cod]
 log.txt
 .venv/
 venv/
 .dockerignore
+```
 
 ## Разработка
 Для правок в коде: app.py
@@ -117,9 +121,10 @@ venv/
 Для изменений зависимостей: requirements.txt
 
 После правок пересобрать Docker:
+  ```bash
   docker-compose build proxy
   docker-compose up -d
-
+  ```
 Проверять эндпоинты через curl или Open-WebUI.
 
 Примечание: файл log.txt не хранится в репозитории, он создаётся автоматически при первом запросе. ```
