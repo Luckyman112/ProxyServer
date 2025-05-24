@@ -44,8 +44,9 @@
 
 ## Запуск
 ### Локально
-export TZ=Europe/Riga     # настроить часовой пояс
-python app.py
+    ```bush
+   export TZ=Europe/Riga     # настроить часовой пояс
+   python app.py
 — сервер стартует на http://0.0.0.0:5000.
 
 ### Через Docker
