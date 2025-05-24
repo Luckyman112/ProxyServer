@@ -34,7 +34,7 @@
    ```bash
    git clone <ваш_репозиторий_URL>
    cd ProxyServer
-   `````
+   ```
 
 2. (опционально) Создать виртуальное окружение и установить зависимости:
     ```bash
@@ -42,19 +42,22 @@
    source venv/bin/activate    # Linux/macOS
    venv\Scripts\activate       # Windows
    pip install -r requirements.txt 
-   `````
+   ```
 
 ## Запуск
 ### Локально
    ```bash
    export TZ=Europe/Riga     # настроить часовой пояс
    python app.py 
-  `````
+  ```
 — сервер стартует на http://0.0.0.0:5000.
 
 ### Через Docker
-docker-compose up --build -d
+   ```bash
+   docker-compose up --build -d
+   ```
 proxy слушает 5000:5000
+
 
 open-webui слушает 3000:8080
 
@@ -66,11 +69,12 @@ log.txt: файл логов создаётся автоматически пр�
 ## Endpoints
 ### GET /v1/models
 Возвращает JSON:
-
+```json
 {
   "object":"list",
   "data":[{"id":"gpt-3.5-turbo","object":"model","created":0,"owned_by":"proxy-server","permission":[]}]
 }
+```
 
 ### OPTIONS /v1/models
 CORS-прелюдия, отвечает 204 No Content.
