@@ -36,11 +36,11 @@
    cd ProxyServer
 
 2. (опционально) Создать виртуальное окружение и установить зависимости:
-  ```bash
-  python -m venv venv
-  source venv/bin/activate    # Linux/macOS
-  venv\Scripts\activate       # Windows
-  pip install -r requirements.txt
+   ```bash
+   python -m venv venv
+   source venv/bin/activate    # Linux/macOS
+   venv\Scripts\activate       # Windows
+   pip install -r requirements.txt 
 
 ## Запуск
 ### Локально
