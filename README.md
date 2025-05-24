@@ -34,19 +34,22 @@
    ```bash
    git clone <ваш_репозиторий_URL>
    cd ProxyServer
+   `````
 
 2. (опционально) Создать виртуальное окружение и установить зависимости:
-   ```bash
+    ```bash
    python -m venv venv
    source venv/bin/activate    # Linux/macOS
    venv\Scripts\activate       # Windows
    pip install -r requirements.txt 
+   `````
 
 ## Запуск
 ### Локально
-    ```bush
+   ```bash
    export TZ=Europe/Riga     # настроить часовой пояс
-   python app.py
+   python app.py 
+  `````
 — сервер стартует на http://0.0.0.0:5000.
 
 ### Через Docker
