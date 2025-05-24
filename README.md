@@ -32,7 +32,7 @@
 
 1. Клонировать репозиторий:  
    ```bash
-   git clone <ваш_репозиторий_URL>
+   git clone https://github.com/Luckyman112/ProxyServer
    cd ProxyServer
    ```
 
@@ -50,14 +50,14 @@
    export TZ=Europe/Riga     # настроить часовой пояс
    python app.py 
   ```
-— сервер стартует на http://0.0.0.0:5000.
+— сервер стартует на **http://0.0.0.0:5000**.
 
 ### • Через Docker
    ```bash
    docker-compose up --build -d
    ```
-• proxy слушает 5000:5000
-• open-webui слушает 3000:8080
+• **proxy** слушает **5000:5000**
+• **open-webui** слушает **3000:8080**
 
 ## Конфигурация
 • **TZ**: часовой пояс задаётся в **Dockerfile** через **ENV TZ=Europe/Riga** и пакет **tzdata**.
@@ -65,7 +65,7 @@
 • **log.txt**: файл логов создаётся автоматически при первом запросе.
 
 ## Endpoints
-### • GET /v1/models
+### • GET **/v1/models**
 Возвращает JSON:
 ```json
 {
@@ -75,17 +75,17 @@
 }
 ```
 
-### • OPTIONS /v1/models
-CORS-прелюдия, отвечает 204 No Content.
+### • OPTIONS **/v1/models**
+CORS-прелюдия, отвечает **204 No Content**.
 
-### • POST /v1/chat/completions
+### • POST **/v1/chat/completions**
 
-  С stream=true отдаёт SSE-поток (text/event-stream) с фиктивными чат-чанками и завершением data: [DONE].
+  С **stream=tru**e отдаёт SSE-поток (**text/event-stream**) с фиктивными чат-чанками и завершением **data: [DONE]**.
 
-  Без stream (или stream=false) выдаёт единичный JSON-ответ в формате OpenAI.
+  Без **stream** (или **stream=false**) выдаёт единичный JSON-ответ в формате OpenAI.
 
-### • OPTIONS /v1/chat/completions
-CORS-прелюдия, отвечает 204 No Content.
+### • OPTIONS **/v1/chat/completions**
+CORS-прелюдия, отвечает **204 No Content**.
 
 ## Логи
 Все входящие payload’ы записываются в log.txt в формате JSON:
@@ -98,7 +98,7 @@ CORS-прелюдия, отвечает 204 No Content.
 }
 ```
 
-Чтобы смотреть логи на хосте (при volume .:/app):
+Чтобы смотреть логи на хосте (при volume **.:/app**):
 ```bash
 tail -f log.txt
 ```
@@ -114,15 +114,15 @@ venv/
 ```
 
 ## Разработка
-• Для правок в коде: app.py
+• Для правок в коде: **app.py**
 
-• Для изменений зависимостей: requirements.txt
+• Для изменений зависимостей: **requirements.txt**
 
 • После правок пересобрать Docker:
   ```bash
   docker-compose build proxy
   docker-compose up -d
   ```
-• Проверять эндпоинты через curl или Open-WebUI.
+• Проверять эндпоинты через **curl** или **Open-WebUI**.
 
-**Примечание**: файл **log.txt** не хранится в репозитории, он создаётся автоматически при первом запросе. ```
+**Примечание**: файл **log.txt** не хранится в репозитории, он создаётся автоматически при первом запросе. 
